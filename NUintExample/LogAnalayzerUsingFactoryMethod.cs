@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("NUnitExample.UnitTest")]
 
 namespace NUintExample
 {
     public class LogAnalayzerUsingFactoryMethod
     {
-        public bool IsValidLogFileName(string fileName)
-        { return IsValid(fileName); }
+        internal IExtensionManager mgr = new FileExtensionManager();
 
-        protected virtual bool IsValid(string fileName)
-        {
-            FileExtensionManager mgr = new FileExtensionManager();
-            return mgr.isValid(fileName);
-        }
+        public bool IsValidLogFileName(string fileName)
+        { return mgr.isValid(fileName); }
+
+       
     }
 }

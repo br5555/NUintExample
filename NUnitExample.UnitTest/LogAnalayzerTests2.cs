@@ -19,7 +19,7 @@ namespace NUnitExample.UnitTest
 
             ExtensionManagerFactory.SetManager(new FileExtensionManager());
             m_analayzer = new LogAnalyzer();
-            
+
         }
 
         [Test]
@@ -41,6 +41,22 @@ namespace NUnitExample.UnitTest
 
         }
 
+        [Test]
+        public void probaInternalVisibility()
+        {
+            LogAnalayzerUsingFactoryMethod factory = new LogAnalayzerUsingFactoryMethod();
+            FakeExtensionManager manager = new FakeExtensionManager();
+            manager.WillBeValid = true;
+
+            factory.mgr = manager;
+
+            bool result = factory.IsValidLogFileName("whatever.SLF");
+
+            Assert.IsTrue(result);
+
+
+        }
+        
 
         [Test]
         [Ignore("there is a problem with this test")]
@@ -94,6 +110,7 @@ namespace NUnitExample.UnitTest
         }
 
         [Test]
+        [Ignore("Changing base class test is broken")]
         public void overrideTest()
         {
             

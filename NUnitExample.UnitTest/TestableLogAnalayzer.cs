@@ -11,10 +11,7 @@ namespace NUnitExample.UnitTest
     {
         public bool IsSupported;
 
-        protected override bool IsValid(string fileName)
-        {
-            return IsSupported;
-        }
+        
 
 
     }
