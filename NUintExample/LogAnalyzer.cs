@@ -10,12 +10,15 @@ namespace NUintExample
     {
         private IExtensionManager manager;
 
+        public IExtensionManager ExtensionManager
+        {
+            get { return manager; }
+            set { manager = value; }
+        }
+
         public bool WasLastFileNameValid { get; set; }
 
-        public LogAnalyzer(IExtensionManager mgr)
-        {
-            manager = mgr;
-        }
+        
 
         public bool IsValidLogFileName(string fileName)
         {

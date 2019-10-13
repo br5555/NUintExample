@@ -19,7 +19,8 @@ namespace NUnitExample.UnitTest
 
         public void IsValidLogFileName_VariousExtensions_CheckThem(string file, bool expected)
         {
-            LogAnalyzer analayzer = new LogAnalyzer(new FileExtensionManager());
+            LogAnalyzer analayzer = new LogAnalyzer();
+            analayzer.ExtensionManager = new FileExtensionManager();
 
             bool result = analayzer.IsValidLogFileName(file);
 
@@ -32,7 +33,8 @@ namespace NUnitExample.UnitTest
             FakeExtensionManager myFakeManager = new FakeExtensionManager();
             myFakeManager.WillBeValid = true;
 
-            LogAnalyzer log = new LogAnalyzer(myFakeManager);
+            LogAnalyzer log = new LogAnalyzer();
+            log.ExtensionManager = myFakeManager;
 
             bool result = log.IsValidLogFileName("short.ext");
             Assert.True(result);
