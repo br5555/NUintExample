@@ -52,6 +52,7 @@
     <Compile Include="ExtensionManagerFactory.cs" />
     <Compile Include="FileExtensionManager.cs" />
     <Compile Include="IExtensionManager.cs" />
+    <Compile Include="LogAnalayzerUsingFactoryMethod.cs" />
     <Compile Include="LogAnalyzer.cs" />
     <Compile Include="MemCalculator.cs" />
     <Compile Include="Program.cs" />

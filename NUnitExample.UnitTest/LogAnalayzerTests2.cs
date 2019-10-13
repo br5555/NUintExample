@@ -93,6 +93,19 @@ namespace NUnitExample.UnitTest
             StringAssert.Contains("filename has to be provided", ex.Message);
         }
 
+        [Test]
+        public void overrideTest()
+        {
+            FakeExtensionManager stub = new FakeExtensionManager();
+            stub.WillBeValid = true;
+
+            TestableLogAnalayzer logan = new TestableLogAnalayzer(stub);
+
+            bool result = logan.IsValidLogFileName("fillee.ext");
+            
+            Assert.True(result);
+        }
+
 
         [TearDown]
         public void TearDown()
