@@ -8,27 +8,19 @@ namespace NUintExample
 {
     public class LogAnalyzer
     {
+        private IExtensionManager manager;
+
         public bool WasLastFileNameValid { get; set; }
+
+        public LogAnalyzer(IExtensionManager mgr)
+        {
+            manager = mgr;
+        }
 
         public bool IsValidLogFileName(string fileName)
         {
-
-
-            WasLastFileNameValid = false;
-            
-
-            if(string.IsNullOrEmpty(fileName))
-            {
-                throw new ArgumentException("Branac filename has to be provided Branko");
-            }
-
-            if(!fileName.EndsWith(".SLF", StringComparison.CurrentCultureIgnoreCase))
-            {
-                return false;
-            }
-
-            WasLastFileNameValid = true;
-            return true;
+            WasLastFileNameValid = manager.isValid(fileName);
+            return WasLastFileNameValid;
         }
 
     }

@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlwaysValidFakeExtensionManager.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="FakeExtensionmanager.cs" />
     <Compile Include="LogAnalayzerTests.cs" />
     <Compile Include="LogAnalayzerTests2.cs" />
     <Compile Include="MemCalculatorTests.cs" />
