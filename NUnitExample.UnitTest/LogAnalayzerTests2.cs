@@ -16,8 +16,10 @@ namespace NUnitExample.UnitTest
         [SetUp]
         public void Setup()
         {
+
+            ExtensionManagerFactory.SetManager(new FileExtensionManager());
             m_analayzer = new LogAnalyzer();
-            m_analayzer.ExtensionManager = new FileExtensionManager();
+            
         }
 
         [Test]
@@ -60,8 +62,10 @@ namespace NUnitExample.UnitTest
 
         private LogAnalyzer MakeAnalayzer()
         {
+
+            ExtensionManagerFactory.SetManager(new FileExtensionManager());
             LogAnalyzer la = new LogAnalyzer();
-            la.ExtensionManager = new FileExtensionManager();
+            
             return la;
         }
 

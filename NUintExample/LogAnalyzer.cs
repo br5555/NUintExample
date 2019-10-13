@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,9 @@ namespace NUintExample
     {
         private IExtensionManager manager;
 
-        public IExtensionManager ExtensionManager
+        public LogAnalyzer()
         {
-            get { return manager; }
-            set { manager = value; }
+            manager = ExtensionManagerFactory.Create();
         }
 
         public bool WasLastFileNameValid { get; set; }
@@ -22,7 +22,7 @@ namespace NUintExample
 
         public bool IsValidLogFileName(string fileName)
         {
-            WasLastFileNameValid = manager.isValid(fileName);
+            WasLastFileNameValid = manager.isValid(fileName) && (Path.GetFileNameWithoutExtension(fileName).Length > 5);
             return WasLastFileNameValid;
         }
 

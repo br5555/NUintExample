@@ -19,8 +19,9 @@ namespace NUnitExample.UnitTest
 
         public void IsValidLogFileName_VariousExtensions_CheckThem(string file, bool expected)
         {
+
+            ExtensionManagerFactory.SetManager(new FileExtensionManager());
             LogAnalyzer analayzer = new LogAnalyzer();
-            analayzer.ExtensionManager = new FileExtensionManager();
 
             bool result = analayzer.IsValidLogFileName(file);
 
@@ -33,10 +34,10 @@ namespace NUnitExample.UnitTest
             FakeExtensionManager myFakeManager = new FakeExtensionManager();
             myFakeManager.WillBeValid = true;
 
+            ExtensionManagerFactory.SetManager(myFakeManager);
             LogAnalyzer log = new LogAnalyzer();
-            log.ExtensionManager = myFakeManager;
 
-            bool result = log.IsValidLogFileName("short.ext");
+            bool result = log.IsValidLogFileName("shooort.ext");
             Assert.True(result);
         }
       
