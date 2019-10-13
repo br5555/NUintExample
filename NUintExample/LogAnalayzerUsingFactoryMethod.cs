@@ -9,11 +9,12 @@ namespace NUintExample
     public class LogAnalayzerUsingFactoryMethod
     {
         public bool IsValidLogFileName(string fileName)
-        { return GetManager().isValid(fileName); }
+        { return IsValid(fileName); }
 
-        protected virtual IExtensionManager GetManager()
+        protected virtual bool IsValid(string fileName)
         {
-            return new FileExtensionManager();
+            FileExtensionManager mgr = new FileExtensionManager();
+            return mgr.isValid(fileName);
         }
     }
 }

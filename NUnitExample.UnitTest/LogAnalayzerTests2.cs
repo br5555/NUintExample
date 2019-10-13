@@ -96,10 +96,10 @@ namespace NUnitExample.UnitTest
         [Test]
         public void overrideTest()
         {
-            FakeExtensionManager stub = new FakeExtensionManager();
-            stub.WillBeValid = true;
+            
 
-            TestableLogAnalayzer logan = new TestableLogAnalayzer(stub);
+            TestableLogAnalayzer logan = new TestableLogAnalayzer();
+            logan.IsSupported = true;
 
             bool result = logan.IsValidLogFileName("fillee.ext");
             

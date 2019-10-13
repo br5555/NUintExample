@@ -9,17 +9,14 @@ namespace NUnitExample.UnitTest
 {
     public class TestableLogAnalayzer : LogAnalayzerUsingFactoryMethod
     {
-        public TestableLogAnalayzer(IExtensionManager mgr)
+        public bool IsSupported;
+
+        protected override bool IsValid(string fileName)
         {
-            Manager = mgr;
+            return IsSupported;
         }
 
-        public IExtensionManager Manager;
 
-        protected override IExtensionManager GetManager()
-        {
-            return Manager;
-        }
     }
     
 }
