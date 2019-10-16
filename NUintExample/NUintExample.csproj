@@ -50,9 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionManagerFactory.cs" />
+    <Compile Include="FakeWebService.cs" />
     <Compile Include="FileExtensionManager.cs" />
     <Compile Include="IExtensionManager.cs" />
+    <Compile Include="IWebService.cs" />
     <Compile Include="LogAnalayzerUsingFactoryMethod.cs" />
+    <Compile Include="LogAnalayzerUsingMock.cs" />
     <Compile Include="LogAnalyzer.cs" />
     <Compile Include="MemCalculator.cs" />
     <Compile Include="Program.cs" />
