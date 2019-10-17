@@ -53,9 +53,11 @@
     <Compile Include="AlwaysValidFakeExtensionManager.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="FakeEmailService.cs" />
+    <Compile Include="FakeEmailService2.cs" />
     <Compile Include="FakeExtensionmanager.cs" />
     <Compile Include="FakeWebService.cs" />
     <Compile Include="FakeWebService2.cs" />
+    <Compile Include="LogAnalayzer22tests.cs" />
     <Compile Include="LogAnalayzer2Tests.cs" />
     <Compile Include="LogAnalayzerTests.cs" />
     <Compile Include="LogAnalayzerTests2.cs" />

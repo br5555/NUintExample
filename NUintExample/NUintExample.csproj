@@ -49,13 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailInfo.cs" />
     <Compile Include="ExtensionManagerFactory.cs" />
-    <Compile Include="FakeWebService.cs" />
     <Compile Include="FileExtensionManager.cs" />
     <Compile Include="IEmailService.cs" />
+    <Compile Include="IEmailService2.cs" />
     <Compile Include="IExtensionManager.cs" />
     <Compile Include="IWebService.cs" />
     <Compile Include="LogAnalayzer2.cs" />
+    <Compile Include="LogAnalayzer22.cs" />
     <Compile Include="LogAnalayzerUsingFactoryMethod.cs" />
     <Compile Include="LogAnalayzerUsingMock.cs" />
     <Compile Include="LogAnalyzer.cs" />
