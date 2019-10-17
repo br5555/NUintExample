@@ -24,5 +24,27 @@ namespace NSubExample.UnitTests
             logger.Received().LogError321("Filename too short: a.txt");
         }
 
+        [Test]
+        public void Returns_ByDefault_WorksForHardCodedArgument()
+        {
+            IFileNameRules fakeRules = Substitute.For<IFileNameRules>();
+
+            fakeRules.IsValidLogFileName("strict.txt").Returns(true);
+
+            Assert.IsTrue(fakeRules.IsValidLogFileName("strict.txt"));
+        }
+
+        [Test]
+        public void Returns_ByDefault_WorksForHardCodedArgument2()
+        {
+            IFileNameRules fakeRules= Substitute.For<IFileNameRules>();
+
+            //ignore the argument value
+            fakeRules.IsValidLogFileName(Arg.Any<String>()).Returns(true);
+
+            Assert.IsTrue(fakeRules.IsValidLogFileName("anything.txt"));
+            
+        }
+
     }
 }
