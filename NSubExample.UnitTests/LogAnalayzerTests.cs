@@ -92,5 +92,23 @@ namespace NSubExample.UnitTests
             mockWebService.Received().Write(Arg.Is<ErrorInfo>(info => info.Severity == 1000 
                                                              && info.Message.Contains("fake exception")));
         }
+
+        [Test]
+        public void Analayze_LoggerThrows_CallsWebServiceWIthNSubObjectCompare2()
+        {
+            var mockWebService = Substitute.For<IWebService2>();
+            var stubLogger = Substitute.For<ILogger>();
+
+            stubLogger.When(logger => logger.LogError321(Arg.Any<string>()))
+                .Do(info => { throw new Exception("fake exception"); });
+
+            var analayzer = new LogAnalayzer5(stubLogger, mockWebService);
+
+            analayzer.MinNameLength = 10;
+            analayzer.Analayze("Short.txt");
+
+            var expected = new ErrorInfo(1000, "fake exception");
+            mockWebService.Received().Write(expected);
+        }
     }
 }
