@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailInfo.cs" />
+    <Compile Include="ErrorInfo.cs" />
     <Compile Include="ExtensionManagerFactory.cs" />
     <Compile Include="FileExtensionManager.cs" />
     <Compile Include="IComplicatedInterface.cs" />
@@ -59,10 +60,12 @@
     <Compile Include="IFileNameRules.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IWebService.cs" />
+    <Compile Include="IWebService2.cs" />
     <Compile Include="LogAnalayzer2.cs" />
     <Compile Include="LogAnalayzer22.cs" />
     <Compile Include="LogAnalayzer3.cs" />
     <Compile Include="LogAnalayzer4.cs" />
+    <Compile Include="LogAnalayzer5.cs" />
     <Compile Include="LogAnalayzerUsingFactoryMethod.cs" />
     <Compile Include="LogAnalayzerUsingMock.cs" />
     <Compile Include="LogAnalyzer.cs" />
