@@ -56,5 +56,23 @@ namespace NSubExample.UnitTests
 
             Assert.Throws<Exception>(() => fakeRules.IsValidLogFileName("anything"));
         }
+
+        [Test]
+        public void Analayze_LoggerThrows_CallsWebService()
+        {
+            var mockWebService = Substitute.For<IWebService>();
+            var stubLogger = Substitute.For<ILogger>();
+
+            stubLogger.When(logger => logger.LogError321(Arg.Any<string>()))
+                .Do(info => { throw new Exception("fake exception"); });
+
+            var analayzer = new LogAnalayzer4(mockWebService, stubLogger);
+
+            analayzer.Analayze("Short.txt");
+
+            // checks that the mock web service was called with a string containing "fake exception"
+            mockWebService.Received().LogError( Arg.Is<string>(s => s.Contains("fake exception") ) );
+
+        }
     }
 }

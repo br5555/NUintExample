@@ -62,6 +62,7 @@
     <Compile Include="LogAnalayzer2.cs" />
     <Compile Include="LogAnalayzer22.cs" />
     <Compile Include="LogAnalayzer3.cs" />
+    <Compile Include="LogAnalayzer4.cs" />
     <Compile Include="LogAnalayzerUsingFactoryMethod.cs" />
     <Compile Include="LogAnalayzerUsingMock.cs" />
     <Compile Include="LogAnalyzer.cs" />
