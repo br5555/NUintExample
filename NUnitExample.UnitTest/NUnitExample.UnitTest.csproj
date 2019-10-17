@@ -63,6 +63,7 @@
     <Compile Include="LogAnalayzerTests2.cs" />
     <Compile Include="LogAnalayzerUsingMockTest.cs" />
     <Compile Include="MemCalculatorTests.cs" />
+    <Compile Include="MytestableComplicatedInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestableLogAnalayzer.cs" />
   </ItemGroup>
