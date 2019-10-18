@@ -59,6 +59,7 @@
     <Compile Include="IExtensionManager.cs" />
     <Compile Include="IFileNameRules.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="IView.cs" />
     <Compile Include="IWebService.cs" />
     <Compile Include="IWebService2.cs" />
     <Compile Include="LogAnalayzer2.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="LogAnalayzerUsingMock.cs" />
     <Compile Include="LogAnalyzer.cs" />
     <Compile Include="MemCalculator.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
