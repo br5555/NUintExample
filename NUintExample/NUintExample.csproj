@@ -59,6 +59,7 @@
     <Compile Include="IExtensionManager.cs" />
     <Compile Include="IFileNameRules.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="IPerson.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="IWebService.cs" />
     <Compile Include="IWebService2.cs" />

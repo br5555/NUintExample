@@ -62,6 +62,7 @@
     <Compile Include="EventRelatedTests.cs" />
     <Compile Include="FakeLogger.cs" />
     <Compile Include="LogAnalayzerTests.cs" />
+    <Compile Include="PersonTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
