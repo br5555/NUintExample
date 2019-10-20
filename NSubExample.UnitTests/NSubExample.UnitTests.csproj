@@ -59,8 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTestsClass.cs" />
+    <Compile Include="ConfigurationManagerTests.cs" />
     <Compile Include="EventRelatedTests.cs" />
     <Compile Include="FakeLogger.cs" />
+    <Compile Include="LogAnalayzer6Tests.cs" />
     <Compile Include="LogAnalayzerTests.cs" />
     <Compile Include="PersonTests.cs" />
     <Compile Include="Program.cs" />
