@@ -66,6 +66,7 @@
     <Compile Include="MytestableComplicatedInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestableLogAnalayzer.cs" />
+    <Compile Include="TimeLoggerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
